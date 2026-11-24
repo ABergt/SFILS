@@ -1,0 +1,25 @@
+The SFILS Database is designed to store and analyze the San Francisco Public Library usage dataset.
+
+The source dataset contains 437,115 records and 14 columns.
+
+
+The database will use a relational structure implemented in MySQL.
+
+Instead of storing all information in one large table, I will use individual tables to separate reusable categories.
+- library_usage_records
+- patron_types
+- libraries
+- age_ranges
+- notification_preferences
+
+The dataset doesn't have a unique patron identifier so the database will generate a primary key for each record.
+
+Identical source rows will be kept because the identical values don't necessarily mean they're the same person.
+
+
+Initial analysis:
+- 927 missing age range values
+- 2 missing home library codes
+- 40,592 missing circulation active year values
+- 2,700 missing notification definitions
+- 106,272 completely duplicate rows
